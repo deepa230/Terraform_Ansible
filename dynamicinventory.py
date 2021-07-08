@@ -2,7 +2,6 @@
 import pprint
 import boto3
 import json
-os.environ['AWS_DEFAULT_REGION'] = 'ap-south-1'
 def getgroupofhosts(ec2):
     allgroups = {}
 
