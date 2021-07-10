@@ -5,13 +5,9 @@
   tasks:
    - name: Docker Installation
      apt:
-      name: "{{item}}"
+      name: docker.io
       state: latest
       update_cache: true
-     loop:
-        - docker-ce
-        - docker-ce-cli
-        - containerd.io
 
    - name: install APT transport HTTPS
      apt:
