@@ -24,7 +24,7 @@
         dest: /home/ubuntu/.kube/config
         owner: ubuntu
         remote_src: true
-     name: "copy admin.comf to user's kube config"
+     name: "copy admin.conf to user's kube config"
    -
      name: install Pod network
      become: yes
