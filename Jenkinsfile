@@ -24,6 +24,10 @@ stages {
                 sh 'terraform apply --auto-approve'
             }
         }
+        stage ("wait_for_testing")
+        {
+                sh 'sleep 60'
+        }
          stage('execute ansible') {
             steps {
                 ansiblePlaybook credentialsId: 'privatekey', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dynamicinventory.py', playbook: 'main.yml'
