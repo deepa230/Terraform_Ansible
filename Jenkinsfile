@@ -24,9 +24,10 @@ stages {
                 sh 'terraform apply --auto-approve'
             }
         }
-        stage ("wait_for_testing")
-        {
+        stage ("wait_for_excecuting ansible"){
+            steps {
                 sh 'sleep 60'
+            }
         }
          stage('execute ansible') {
             steps {
