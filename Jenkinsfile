@@ -4,11 +4,6 @@ environment {
        AWS_DEFAULT_REGION = 'ap-south-1'
     }
 stages {
-        stage('Git Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/deepa230/Terraform_Ansible.git'
-            }
-        }
         stage('Terraform init') {
             steps {
                 sh 'terraform init'
