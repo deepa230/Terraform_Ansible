@@ -21,7 +21,7 @@ stages {
         }
          stage('execute ansible') {
             steps {
-                sh 'sleep 60'
+                sh 'pwd; sleep 60; echo "Hello World"'
                 ansiblePlaybook credentialsId: 'privatekey', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dynamicinventory.py', playbook: 'main.yml'
             }
         }
